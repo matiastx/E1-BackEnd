@@ -45,11 +45,9 @@ main();
 async function createNewSpent (file) {
     console.log("Crear nuevo gasto");
     const newSpent = await promptNewSpent();
-    console.log("datos del Gasto ", newSpent);
+    console.log("Gasto registrado Exitosamente!", newSpent);
     const data = await getDataFromFile(file);
-    console.log("data leida", data);
     data.push(newSpent);
-    console.log("data modificada", data);
     await saveDataToFile(file, data);
 }
 
